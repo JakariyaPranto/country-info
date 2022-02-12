@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.country-menu {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 10px;
+    position: relative;
+}
+.country-menu .country {
+    background-color: aqua;
+    height: 180px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.country-menu .country img {
+    max-width: 100%;
+}
+
+
+
+
+.country-detail {
+    background: aqua;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 5px 5px 500px #000;
+}
+.overlay-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.close-btn {
+    border-bottom: 1px solid #5692F4;
+    padding-bottom: 35px;
+}
+.close-btn button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #FF0000;
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    cursor: pointer;
+}
+.country-modal {
+    display:none;
+}
